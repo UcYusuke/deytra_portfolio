@@ -1,0 +1,36 @@
+
+@use "color";
+
+.section{
+    padding: 48px 0;
+}
+
+.section_inner{
+    padding: 0 32px; //セクションの左右余白
+}
+
+.section_head {
+    display: flex;
+    flex-direction: column; //セクションのmainとsubを縦並び
+    margin-bottom: 32px; //セクションタイトルの下部margin
+}
+
+.section_head-main {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+
+.section-head-sub {
+    font-size: 11px;
+}
+
+.section_contents {
+    margin-top: 40px; //セクションコンテンツとリード文のあいだの余白
+}
+
+.section_lead-text{
+    //リード文
+    font-size: 16px; 
+    line-height: 1.6;
+}
+

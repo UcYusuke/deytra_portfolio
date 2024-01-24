@@ -1,0 +1,24 @@
+@use "color";
+
+.service-list {
+}
+
+.service_item + .service_item {
+    margin-top: 40px; //itemどうしの余白
+}
+.service_item-img {
+    text-align: center; //画像中央寄せ
+    margin-bottom: 14px; //画像とitem-nameのあいだの余白
+}
+.service_item-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center; //テキスト中央寄せ
+    margin-bottom: 10px; //item-nameとitem-textのあいだの余白
+}
+.service_item-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+

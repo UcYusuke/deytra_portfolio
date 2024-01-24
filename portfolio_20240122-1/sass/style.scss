@@ -1,6 +1,128 @@
 @use "color";
+@use "fv";
+@use "common";
+@use "service";
+@use "works";
+@use "about";
 
 body{
-    font-family: "Noto Sans Jp", sans-serif;
+    font-family: 'Oswald', 'Noto Sans JP',sans-serif;
     color: color.$cl-black;
 }
+
+.button{
+    //svgアイコンとテキストを上下中央揃え
+    display: flex;
+    align-items: center;
+    //svgとテキスト全体
+    padding: 6px 10px 6px 30px;
+    width: 160px;
+    margin: 0 auto;
+}
+
+//contactのアイコン
+.button-bg{
+    //svgアイコン全体の背景色
+    background-color: color.$white;
+    //contactのアイコンのテキスト色
+    & .button_text{
+        color: color.$bg-dark;
+    }
+}
+
+
+
+//Twitterのアイコン
+.button-border{
+    //twitterアイコンのボーダー
+    border: 1px solid color.$white;
+    //twitterアイコンのテキスト色
+    & .button_text{
+        color: color.$white;
+    }
+}
+
+.button_icon{
+    width: 24px; //svgアイコンの幅を統一
+    display: flex;
+    align-items: center;
+}
+
+//svgアイコン部分の色設定
+.button_icon-path{
+    fill: color.$white;
+}
+
+.button_icon-path-contact{
+    fill: color.$bg-dark;
+}
+
+//svg隣のテキスト
+.button_text{
+    margin-left: 10px; //svgアイコンとテキストの余白
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: color.$white;
+}
+
+//header
+
+.header{
+    background-color: color.$bg-dark;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header_container{
+    position: relative; //ハンバーガーボタンの参照位置
+}
+
+//ヘッダーロゴ
+.header_logo{
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 20px;
+    color: color.$white;
+}
+
+//ハンバーガーボタン
+.header_menu-button{
+    border: none; //buttonタグのデフォルトの線を削除
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    height: 36px;
+    overflow: hidden; //スクロール無効
+    color: transparent; //「Menu」の文字をスマホで非表示
+    //ハンバーガーボタンの三本線の画像
+    background: url(../img/bg_menu.png) center center no-repeat;
+    background-size: 100% auto;
+}
+
+//ハンバーガーボタンの閉じるボタン
+.header.is-checked{
+    background: url(../img/bg_menu-close.png) center center no-repeat;
+    background-size: 100% auto;
+}
+
+.header_contents{
+    //ヘッダーの背景を画面下まで伸ばす
+    //ウインドウの高さ100vhからヘッダーの高さ88pxを引くと、
+    // ヘッダーとコンテンツ合計でウィンドウの高さになる
+    height: calc(100vh - 88px);
+    border-top: 1px solid color.$white; //ヘッダー境界線
+    padding-top: 60px;
+    //デフォルトでドロワー画面を非表示
+    display: none;
+}
+
+.header_nav-item + .header_nav-item{
+    margin-top: 24px; //ドロワー画面のメニュー同士の間隔
+}
+
+
+

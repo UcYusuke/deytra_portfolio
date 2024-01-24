@@ -1,0 +1,34 @@
+@use "color";
+
+/* works */
+
+.works{
+    background-color: color.$bg-light;
+}
+
+.works-list {
+
+}
+
+.works_item + .works_item {
+    margin-top: 40px; //itemどうしの余白
+}
+
+.works_item-img {
+    img {
+        //リンクイメージ画像に影をつける
+        box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
+    }
+    margin-bottom: 12px; //リンクイメージ画像と見出しのあいだの余白
+}
+
+.works_item-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px; //説明文と「詳しくみる」のあいだの余白
+}
+
+.works_item-link {
+    font-size: 14px;
+    text-decoration: underline; //リンク下線
+}

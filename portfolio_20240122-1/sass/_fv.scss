@@ -1,0 +1,35 @@
+@use "color";
+
+
+//fv
+
+.fv{
+    position: relative;
+}
+
+.fv_contents{
+    position: absolute; 
+    bottom: 26px; //画像の下端からの位置
+    left: 0;
+    width: 100%;
+    height: 209px;
+    background: url(../img/sp/bg_fv.png) center center no-repeat;
+    background-size: 100% auto;
+    padding: 32px;
+}
+
+.fv_heading {
+
+}
+
+.fv_heading-main {
+    display: block;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+
+.fv_heading-sub {
+    margin-top: 12px;
+    display: block;
+    font-size: 14px;
+}
